@@ -8,24 +8,24 @@ export default function MainContent() {
         alt="world map"
         className="w-full h-full object-cover opacity-80"
       />
-      <h2 className="absolute top-1/10 w-full text-white text-[1.8rem] font-bold text-center">
+      <h2 className="absolute top-1/10 w-full text-white text-[1.8rem] font-bold text-center lg:text-5xl">
         Our Aim
       </h2>
-      <h2 className="absolute top-[18%] w-full text-white text-[1.8rem] font-bold text-center">
+      <h2 className="text-[#00FF00] absolute top-[18%] w-full  text-[1.8rem] font-bold text-center lg:text-5xl lg:top-[25%]">
         Always Protected
       </h2>
-      <h2 className="absolute top-[27%] w-full text-white text-[1.8rem] font-bold text-center">
+      <h2 className="absolute top-[27%] w-full text-white text-[1.8rem] font-bold text-center lg:text-5xl lg:top-[40%]  ">
         By Ghost VPN.
       </h2>
-      <h1 className="absolute top-4/10 w-full px-4 text-white text-lg font-bold text-center">
+      <h1 className="absolute top-4/10 w-full px-4 text-white text-lg font-bold text-center lg:text-2xl lg:top-6/10">
         Your <span className="text-[#00FF00]">privacy</span> is our
         <span className="text-[#00FF00]"> priority</span>. Enjoy secure and
         anonymous browsing with GhostVPN.
       </h1>
       <div className="flex items-center justify-center">
-          <MainButton className="absolute bottom-2/10 w-[300px] bg-[#00FF00] text-black font-bold py-2 px-4 rounded lg:bottom-3/10">
-            Get Started
-          </MainButton>
+        <MainButton className="absolute bottom-2/10 w-[300px] bg-[#00FF00] text-black font-bold py-2 px-4 rounded lg:bottom-1/10 lg:text-3xl">
+          Get Started
+        </MainButton>
       </div>
     </div>
   );
