@@ -10,7 +10,7 @@ export default function Header() {
               <img src="Logo.png" alt="Ghost VPN Logo" />
             </div>
             <h1 className="text-xl font-bold text-white lg:text-2xl">
-              GhostVPN
+              Ghost<span className="text-[#00FF00]">VPN</span>
             </h1>
           </div>
           <div className="hidden lg:flex gap-10 items-center">
