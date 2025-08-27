@@ -1,5 +1,6 @@
 import MainButton from "./MainButton";
 import IconsSlider from "./IconsSlider";
+import PricingPlan from "./PricingPlan";
 
 export default function MainContent() {
   return (
@@ -32,6 +33,9 @@ export default function MainContent() {
         </div>
         <div className="">
             <IconsSlider />
+        </div>
+        <div>
+          <PricingPlan />
         </div>
    </>
   );
