@@ -1,0 +1,21 @@
+
+import { useEffect } from "react";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+
+export function AnimatedPrice({ value }: { value: number }) {
+  // Motion value that will animate
+  const count = useMotionValue(value);
+
+  // Apply a spring for smoothness
+  const smooth = useSpring(count, { stiffness: 100, damping: 20 });
+
+  // Convert to formatted display string
+  const display = useTransform(smooth, (latest) => `$${latest.toFixed(2)}`);
+
+  // Update motion value when prop changes
+  useEffect(() => {
+    count.set(value);
+  }, [value, count]);
+
+  return <motion.span className="text-4xl font-bold">{display}</motion.span>;
+}

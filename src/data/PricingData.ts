@@ -1,3 +1,14 @@
+type PlanType = "free" | "premium" | "unlimited";
+
+export interface PricingCardProps {
+  title: string;
+  price: number ;
+  userMessage: string;
+  features: string[];
+  featuresMessage: string;
+  plan: PlanType;
+}
+
 const basicFeatures = [
   "Privacy across all platforms",
   "Secure 1 device at a time",
@@ -20,7 +31,7 @@ const unlimitedFeatures = [
   "Access to all our products",
 ];
 
-export const pricingPlans = [
+export const pricingPlansMonthly: PricingCardProps[] = [
   {
     title: "GhostVPN Free Version",
     price: 0.0,
@@ -40,6 +51,60 @@ export const pricingPlans = [
   {
     title: "Unlimited",
     price: 14.99,
+    userMessage: "Upgrade to Unlimited",
+    features: unlimitedFeatures,
+    featuresMessage: "Access all premium features and newest updates",
+    plan: "unlimited",
+  },
+];
+
+export const pricingPlansYearly: PricingCardProps[] = [
+  {
+    title: "GhostVPN Free Version",
+    price: 0.0,
+    userMessage: "Get Started for Free",
+    features: basicFeatures,
+    featuresMessage: "Security and privacy for everyone",
+    plan: "free",
+  },
+  {
+    title: "Premium",
+    price: 7.99,
+    userMessage: "Upgrade to Premium",
+    features: premiumFeatures,
+    featuresMessage: "Advanced features and fastest VPN speeds",
+    plan: "premium",
+  },
+  {
+    title: "Unlimited",
+    price: 12.99,
+    userMessage: "Upgrade to Unlimited",
+    features: unlimitedFeatures,
+    featuresMessage: "Access all premium features and newest updates",
+    plan: "unlimited",
+  },
+];
+
+export const pricingPlans2Years: PricingCardProps[] = [
+  {
+    title: "GhostVPN Free Version",
+    price: 0.0,
+    userMessage: "Get Started for Free",
+    features: basicFeatures,
+    featuresMessage: "Security and privacy for everyone",
+    plan: "free",
+  },
+  {
+    title: "Premium",
+    price: 4.99,
+    userMessage: "Upgrade to Premium",
+    features: premiumFeatures,
+    featuresMessage: "Advanced features and fastest VPN speeds",
+    plan: "premium",
+  },
+  {
+    title: "Unlimited",
+    price: 9.99,
     userMessage: "Upgrade to Unlimited",
     features: unlimitedFeatures,
     featuresMessage: "Access all premium features and newest updates",
