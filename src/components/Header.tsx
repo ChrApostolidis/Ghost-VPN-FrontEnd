@@ -10,7 +10,7 @@ export default function Header() {
               <img src="Logo.png" alt="Ghost VPN Logo" />
             </div>
             <h1 className="text-xl font-bold text-white lg:text-2xl">
-              Ghost<span className="text-[#00FF00]">VPN</span>
+              Ghost<span className="text-primary">VPN</span>
             </h1>
           </div>
           <div className="hidden lg:flex gap-10 items-center">
@@ -18,7 +18,7 @@ export default function Header() {
               <ul className="flex space-x-4">
                 <li>
                   <a
-                    href="#"
+                    href="#features"
                     className="text-white text-xl hover:text-[#33d36e]"
                   >
                     Features
@@ -26,7 +26,7 @@ export default function Header() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#pricing-card"
                     className="text-white text-xl hover:text-[#33d36e]"
                   >
                     Prices
@@ -34,7 +34,7 @@ export default function Header() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#contact"
                     className="text-white text-xl hover:text-[#33d36e]"
                   >
                     Contact
