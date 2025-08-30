@@ -1,7 +1,7 @@
 import MainButton from "./MainButton";
 import IconsSlider from "./IconsSlider";
 import PricingPlan from "./PricingPlan";
-import SlidingTabs from "./AnimationPrice";
+import MainContentFeatures from "./MainContentFeatures";
 
 export default function MainContent() {
   return (
@@ -32,14 +32,14 @@ export default function MainContent() {
           </MainButton>
         </div>
       </div>
-      <div className="">
+      <div>
+        <MainContentFeatures />
+      </div>
+      <div>
         <IconsSlider />
       </div>
       <div>
         <PricingPlan />
-      </div>
-      <div>
-        <SlidingTabs />
       </div>
     </>
   );

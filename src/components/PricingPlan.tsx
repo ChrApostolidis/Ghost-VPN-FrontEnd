@@ -20,18 +20,18 @@ export default function PricingPlan() {
         <h2 className="text-white text-3xl font-bold">Pricing Plans</h2>
         <p className="text-gray-400">Choose a plan that suits your needs.</p>
       </div>
-      <div className="flex gap-2 border-solid border-1  border-primary rounded-2xl mb-2 lg:mb-6">
+      <div className="flex gap-2 border-solid border-2  border-primary rounded-2xl mb-2 lg:mb-6">
         {tabs.map((tab) => (
           <button
             key={tab}
             onClick={() => setPlan(tab)}
             className={`relative z-10 px-4 py-2 text-sm font-medium transition-colors lg:text-2xl cursor-pointer
-            ${plan === tab ? "text-black" : "text-green-500"}`}
+            ${plan === tab ? "text-black" : "text-primary"}`}
           >
             {plan === tab && (
               <motion.span
                 layoutId="active-pill"
-                className="absolute inset-0 rounded-lg bg-green-500"
+                className="absolute inset-0 rounded-lg bg-primary"
                 transition={{ type: "spring", stiffness: 300, damping: 25 }}
               />
             )}

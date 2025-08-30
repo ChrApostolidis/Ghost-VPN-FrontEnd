@@ -37,7 +37,7 @@ export default function Header() {
                     href="#contact"
                     className="text-white text-xl hover:text-[#33d36e]"
                   >
-                    Contact
+                    Reviews
                   </a>
                 </li>
               </ul>

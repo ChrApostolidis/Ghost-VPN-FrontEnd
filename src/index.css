@@ -1,13 +1,12 @@
 @import "tailwindcss";
 
-
 html {
   scroll-behavior: smooth;
 }
 
 @theme {
-  --color-primary: #00FF00;
-  --color-secondary: #1E40AF;
+  --color-primary: #00ff00;
+  --color-secondary: #101828;
   --animate-infinite-scroll: infinite-scroll 25s linear infinite;
 }
 
