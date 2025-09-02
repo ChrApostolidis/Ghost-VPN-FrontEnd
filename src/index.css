@@ -18,3 +18,41 @@ html {
     transform: translateX(calc(-50% - 20px));
   }
 }
+
+
+.glitch {
+  position: relative;
+  color: #00ff00;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+}
+.glitch::before {
+  animation: glitchTop 2s infinite linear alternate-reverse;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  color: #0ff;
+}
+.glitch::after {
+  animation: glitchBottom 2s infinite linear alternate-reverse;
+  clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+  color: #f0f;
+}
+@keyframes glitchTop {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, -2px); }
+  40% { transform: translate(-5px, -1px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(5px, 0); }
+  100% { transform: translate(0); }
+}
+@keyframes glitchBottom {
+  0% { transform: translate(0); }
+  20% { transform: translate(2px, 2px); }
+  40% { transform: translate(5px, 1px); }
+  60% { transform: translate(-2px, -2px); }
+  80% { transform: translate(-5px, 0); }
+  100% { transform: translate(0); }
+}

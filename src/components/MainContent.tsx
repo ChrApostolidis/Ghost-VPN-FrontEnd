@@ -2,6 +2,7 @@ import MainButton from "./MainButton";
 import IconsSlider from "./IconsSlider";
 import PricingPlan from "./PricingPlan";
 import MainContentFeatures from "./MainContentFeatures";
+import ExpertReviews from "./ExpertReviews";
 
 export default function MainContent() {
   return (
@@ -40,6 +41,9 @@ export default function MainContent() {
       </div>
       <div>
         <PricingPlan />
+      </div>
+      <div>
+        <ExpertReviews />
       </div>
     </>
   );
