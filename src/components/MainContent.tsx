@@ -3,6 +3,7 @@ import IconsSlider from "./IconsSlider";
 import PricingPlan from "./PricingPlan";
 import MainContentFeatures from "./MainContentFeatures";
 import ExpertReviews from "./ExpertReviews";
+import FaqContent from "./FaqContent";
 
 export default function MainContent() {
   return (
@@ -44,6 +45,9 @@ export default function MainContent() {
       </div>
       <div>
         <ExpertReviews />
+      </div>
+      <div>
+        <FaqContent />
       </div>
     </>
   );

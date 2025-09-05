@@ -3,7 +3,7 @@ import type { ExpertDataType } from "../data/ExpertData";
 import { ExpertData } from "../data/ExpertData";
 import ExpertCard from "./ExpertCard";
 
-export default function ReviewCarousel() {
+export default function ExpertReviews() {
   const [index, setIndex] = useState<number>(1);
   const [isTransitioning, setIsTransitioning] = useState<boolean>(true);
   const [isDesktop, setIsDesktop] = useState<boolean>(false);
