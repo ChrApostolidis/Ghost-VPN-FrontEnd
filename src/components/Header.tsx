@@ -34,7 +34,7 @@ export default function Header() {
                 </li>
                 <li>
                   <a
-                    href="#contact"
+                    href="#reviews"
                     className="text-white text-xl hover:text-[#33d36e]"
                   >
                     Reviews

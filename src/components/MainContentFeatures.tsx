@@ -41,7 +41,7 @@ export default function MainContentFeatures() {
         Ghost VPN offers a range of features that ensure a secure and private
         browsing experience.
       </p>
-      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:p-4">
+      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:p-4 lg">
         {tabs.map((tab) => (
           <FeatureButton
             key={tab}
@@ -60,9 +60,9 @@ export default function MainContentFeatures() {
         <div className="flex flex-col p-2 lg:flex-row">
           <div className="lg:w-120 flex flex-col justify-center items-center gap-1.5">
             <h3 className="text-primary text-2xl px-4 mb-2 lg:text-center">{selectedTab} Features</h3>
-            <p className="text-lg text-white pl-4 lg:pl-0 ">
+            <div className="text-lg text-white pl-4 lg:pl-0 ">
               {tabsContent[selectedTab as keyof typeof tabsContent]}
-            </p>
+            </div>
             <MainButton className="mt-4">
               Get Started with GhostVPN
             </MainButton>
