@@ -1,4 +1,4 @@
-export interface ExpertData {
+export interface ExpertDataType {
   id: number;
   image: string;
   context: string;
@@ -6,7 +6,7 @@ export interface ExpertData {
   description: string;
 }
 
-export const ExpertData: ExpertData[] = [
+export const ExpertData: ExpertDataType[] = [
   {
     id: 1,
     image:"./ExpertImages/Musk.jpg",

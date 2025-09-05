@@ -1,62 +1,133 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import type { ExpertDataType } from "../data/ExpertData";
 import { ExpertData } from "../data/ExpertData";
 import ExpertCard from "./ExpertCard";
 
 export default function ReviewCarousel() {
-  const [index, setIndex] = useState(1); 
-  const [isTransitioning, setIsTransitioning] = useState(true);
+  const [index, setIndex] = useState<number>(1);
+  const [isTransitioning, setIsTransitioning] = useState<boolean>(true);
+  const [isDesktop, setIsDesktop] = useState<boolean>(false);
+  const [containerWidth, setContainerWidth] = useState<number>(0);
 
-  const extendedReviews = [
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const indexRef = useRef<number>(index);
+  useEffect(() => {
+    indexRef.current = index;
+  }, [index]);
+
+  const CARD_WIDTH = 550;
+
+  // clones for seamless loop
+  const extendedData: ExpertDataType[] = [
     ExpertData[ExpertData.length - 1],
     ...ExpertData,
     ExpertData[0],
   ];
 
+  // normalize extended index to real data index
+  const normalizeIndex = (i: number): number => {
+    if (i === 0) return ExpertData.length - 1;
+    if (i === extendedData.length - 1) return 0;
+    return i - 1;
+  };
+
+  // autoplay with early wrap
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => prev + 1);
-    }, 7000);
+    const advance = () => {
+      const cur = indexRef.current;
+      const lastReal = extendedData.length - 2;
+
+      if (cur === lastReal) {
+        setIsTransitioning(false);
+        setIndex(0);
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            setIsTransitioning(true);
+            setIndex(1); // animate forward
+          });
+        });
+      } else {
+        setIndex(cur + 1);
+      }
+    };
+
+    const interval = setInterval(advance, 7000);
     return () => clearInterval(interval);
+  }, [extendedData.length]);
+
+  // detect desktop and container width
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+      if (containerRef.current) {
+        setContainerWidth(containerRef.current.offsetWidth);
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    if (index === extendedReviews.length - 1) {
-      setTimeout(() => {
-        setIsTransitioning(false);
-        setIndex(1);
-      }, 700);
-    }
-    if (index === 0) {
-      setTimeout(() => {
-        setIsTransitioning(false);
-        setIndex(ExpertData.length);
-      }, 700);
-    }
-  }, [index, extendedReviews.length]);
-
-  useEffect(() => {
-    if (!isTransitioning) {
-      requestAnimationFrame(() => setIsTransitioning(true));
-    }
-  }, [isTransitioning]);
+  const activeReal = normalizeIndex(index);
 
   return (
-    <div className="relative w-[400px] mx-auto overflow-hidden bg-secondary lg:w-[600px]">
-      <div
-        className={`flex ${isTransitioning ? "transition-transform duration-700 ease-in-out" : ""}`}
-        style={{
-          transform: `translateX(calc(-${index * 80}% + 10%))`,
-        }}
-      >
-        {extendedReviews.map((expert, i) => (
-          <div key={i} className="w-4/5 flex-shrink-0 px-2">
-            <ExpertCard {...expert} />
-          </div>
-        ))}
+    <>
+      <div className="bg-secondary py-4">
+        <h2 className="text-4xl font-bold text-white text-center lg:text-5xl lg:py-4">
+          Hear from the Experts
+        </h2>
       </div>
+      <div
+        ref={containerRef}
+        className="relative w-full overflow-hidden bg-secondary"
+      >
+        <div
+          className={`flex ${
+            isTransitioning
+              ? "transition-transform duration-700 ease-in-out"
+              : ""
+          }`}
+          style={{
+            willChange: "transform",
+            transform: isDesktop
+              ? `translateX(${
+                  containerWidth / 2 - (index + 0.5) * CARD_WIDTH
+                }px)`
+              : `translateX(calc(-${index * 80}% + 10%))`,
+            width: isDesktop
+              ? `${extendedData.length * CARD_WIDTH}px`
+              : undefined,
+          }}
+        >
+          {extendedData.map((expert, i) => {
+            const realI = normalizeIndex(i);
+            const isActive = isDesktop ? realI === activeReal : true;
 
-      <div className="pointer-events-none absolute top-0 left-0 h-full w-12 bg-gradient-to-r from-white"></div>
-      <div className="pointer-events-none absolute top-0 right-0 h-full w-12 bg-gradient-to-l from-white"></div>
-    </div>
+            return (
+              <div
+                key={`${realI}-${i}`}
+                className={`flex-shrink-0 px-2 ${
+                  isDesktop ? "flex justify-center" : "w-4/5 lg:w-full"
+                }`}
+                style={isDesktop ? { width: `${CARD_WIDTH}px` } : undefined}
+              >
+                <div
+                  className={[
+                    "transition-all duration-700",
+                    isDesktop
+                      ? isActive
+                        ? "scale-100 blur-0 opacity-100 z-10"
+                        : "scale-90 blur-sm opacity-40"
+                      : "",
+                  ].join(" ")}
+                >
+                  <ExpertCard {...expert} />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </>
   );
 }
