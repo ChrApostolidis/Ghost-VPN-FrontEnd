@@ -1,8 +1,8 @@
 import MainButton from "../MainComponents/MainButton";
 import IconsSlider from "../IconsSlider";
-import PricingPlan from "../PricingPlan";
+import PricingPlan from "../PricingComp/PricingPlan";
 import MainContentFeatures from "../MainComponents/MainContentFeatures";
-import ExpertReviews from "../ExpertReviews";
+import ExpertReviews from "../ExpertReviewsComp/ExpertReviews";
 import FaqContent from "../FAQComponents/FaqContent";
 
 export default function MainContent() {
