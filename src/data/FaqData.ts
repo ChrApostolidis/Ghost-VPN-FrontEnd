@@ -60,19 +60,31 @@ export const faqs: Record<FaqCategory, FaqItem[]> = {
       answer:
         "A VPN may slightly affect speed due to encryption, but premium VPNs are optimized for streaming so you can enjoy HD and 4K content without buffering.",
     },
+    {
+      id: 9,
+      question: "Can a VPN bypass streaming blocks?",
+      answer:
+        "Yes, many VPNs are designed to bypass streaming blocks by rotating servers and updating IP addresses so you can keep accessing your favorite platforms.",
+    },
   ],
   Legal: [
     {
-      id: 9,
+      id: 10,
       question: "Is using a VPN legal?",
       answer:
         "Yes, using a VPN is legal in most countries. However, some countries have restrictions on VPN usage, so it's essential to check your local laws.",
     },
     {
-      id: 10,
+      id: 11,
       question: "Can I get banned for using a VPN with streaming services?",
       answer:
         "While it's not illegal, some streaming platforms may restrict accounts if VPN usage is detected. A reliable VPN regularly updates its servers to avoid detection.",
+    },
+    {
+      id: 12,
+      question: "Do I need to report VPN usage to my ISP?",
+      answer:
+        "No, you don’t need to report VPN usage. In most regions, VPNs are completely legal, and your ISP cannot see what you’re doing once connected to a VPN server.",
     },
   ],
 };
