@@ -1,4 +1,4 @@
-import MainButton from "./MainButton";
+import MainButton from "./MainComponents/MainButton";
 import { FaRegCreditCard } from "react-icons/fa6";
 import { FaMoneyBillWave } from "react-icons/fa";
 import PlanFeatures from "./PlanFeautures";

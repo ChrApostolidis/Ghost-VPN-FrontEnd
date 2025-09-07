@@ -1,9 +1,9 @@
-import MainButton from "./MainButton";
-import IconsSlider from "./IconsSlider";
-import PricingPlan from "./PricingPlan";
-import MainContentFeatures from "./MainContentFeatures";
-import ExpertReviews from "./ExpertReviews";
-import FaqContent from "./FaqContent";
+import MainButton from "../MainComponents/MainButton";
+import IconsSlider from "../IconsSlider";
+import PricingPlan from "../PricingPlan";
+import MainContentFeatures from "../MainComponents/MainContentFeatures";
+import ExpertReviews from "../ExpertReviews";
+import FaqContent from "../FAQComponents/FaqContent";
 
 export default function MainContent() {
   return (
@@ -49,7 +49,6 @@ export default function MainContent() {
       <div>
         <FaqContent />
       </div>
-     
     </>
   );
 }

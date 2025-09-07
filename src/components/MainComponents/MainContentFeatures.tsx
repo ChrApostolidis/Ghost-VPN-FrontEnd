@@ -1,6 +1,6 @@
 import { useState } from "react";
-import FeatureButton from "./FeatureButton";
-import MainButton from "./MainButton";
+import FeatureButton from "../FeatureButton";
+import MainButton from "../MainComponents/MainButton";
 
 export default function MainContentFeatures() {
   const [selectedTab, setSelectedTab] = useState("Privacy");
