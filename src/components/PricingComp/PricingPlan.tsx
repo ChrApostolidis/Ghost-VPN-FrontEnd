@@ -5,7 +5,7 @@ import {
   pricingPlansMonthly,
   pricingPlans2Years,
   pricingPlansYearly,
-} from "../data/PricingData";
+} from "../../data/PricingData";
 
 type Duration = "1 Month" | "1 Year" | "2 Years";
 type PlanType = "free" | "premium" | "unlimited";

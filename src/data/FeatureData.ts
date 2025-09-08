@@ -20,7 +20,7 @@ export const featuresData = [
     title: "Security",
     description:
       "Your security is our priority. GhostVPN uses advanced encryption protocols to keep your data safe.",
-    image: "./MainFeatures/security.jpg",
+    image: "./MainFeatures/security.png",
   },
   {
     id: 4,

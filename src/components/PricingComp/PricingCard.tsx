@@ -1,8 +1,8 @@
-import MainButton from "./MainComponents/MainButton";
+import MainButton from "../MainComponents/MainButton";
 import { FaRegCreditCard } from "react-icons/fa6";
 import { FaMoneyBillWave } from "react-icons/fa";
-import PlanFeatures from "./PlanFeautures";
-import type { PricingCardProps } from "../data/PricingData";
+import PlanFeatures from "../PlanFeautures";
+import type { PricingCardProps } from "../../data/PricingData";
 import { AnimatedPrice } from "./AnimationPrice";
 
 export default function PricingCard({

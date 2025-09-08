@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import type { ExpertDataType } from "../data/ExpertData";
-import { ExpertData } from "../data/ExpertData";
+import type { ExpertDataType } from "../../data/ExpertData";
+import { ExpertData } from "../../data/ExpertData";
 import ExpertCard from "./ExpertCard";
 
 export default function ExpertReviews() {

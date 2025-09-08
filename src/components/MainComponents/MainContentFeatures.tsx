@@ -1,36 +1,12 @@
+// import { useState } from "react";
+// // import FeatureButton from "../FeatureButton";
+// import MainButton from "../MainComponents/MainButton";
 import { useState } from "react";
-import FeatureButton from "../FeatureButton";
-import MainButton from "../MainComponents/MainButton";
+import FeatureTab from "../Features/FeatureTab";
+import MainFeatureContent from "../Features/MainFeatureContent";
 
 export default function MainContentFeatures() {
   const [selectedTab, setSelectedTab] = useState("Privacy");
-  const tabs: string[] = ["Privacy", "Speed", "Security", "Service"];
-  const tabsContent = {
-    Privacy: (
-      <p className="text-lg text-white pl-4">
-        GhostVPN hides your IP and encrypts your data, keeping you invisible
-        online. No trackers, no footprints—just true digital freedom.
-      </p>
-    ),
-    Speed: (
-      <p className="text-lg text-white pl-4">
-        Enjoy lightning-fast speeds with GhostVPN. Stream, download, and browse
-        without interruptions.
-      </p>
-    ),
-    Security: (
-      <p className="text-lg text-white pl-4">
-        Your security is our priority. GhostVPN uses advanced encryption
-        protocols to keep your data safe.
-      </p>
-    ),
-    Service: (
-      <p className="text-lg text-white pl-4">
-        Experience top-notch customer service with GhostVPN. We're here to
-        help you 24/7.
-      </p>
-    ),
-  };
 
   return (
     <div className="bg-secondary">
@@ -41,34 +17,60 @@ export default function MainContentFeatures() {
         Ghost VPN offers a range of features that ensure a secure and private
         browsing experience.
       </p>
-      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:p-4 lg">
-        {tabs.map((tab) => (
-          <FeatureButton
-            key={tab}
-            onClick={() => setSelectedTab(tab)}
-            className={
-              selectedTab === tab
-                ? "bg-primary text-secondary"
-                : "text-white border-primary"
-            }
-          >
-            {tab}
-          </FeatureButton>
-        ))}
-      </div>
-      <div className="border-1 border-solid border-gray-400 mt-4">
-        <div className="flex flex-col p-2 lg:flex-row">
-          <div className="lg:w-120 flex flex-col justify-center items-center gap-1.5">
-            <h3 className="text-primary text-2xl px-4 mb-2 lg:text-center">{selectedTab} Features</h3>
-            <div className="text-lg text-white pl-4 lg:pl-0 ">
-              {tabsContent[selectedTab as keyof typeof tabsContent]}
-            </div>
-            <MainButton className="mt-4">
-              Get Started with GhostVPN
-            </MainButton>
-          </div>          
-        </div>
-      </div>
+      <FeatureTab selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+      <MainFeatureContent selectedTab={selectedTab} />
     </div>
   );
+}
+
+{
+  /* <MainFeatureContent */
+}
+{
+  /* <FeatureTab /> */
+}
+{
+  /* <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:p-4 lg">
+  {tabs.map((tab) => (
+    <FeatureButton
+      key={tab}
+      onClick={() => setSelectedTab(tab)}
+      className={
+        selectedTab === tab
+          ? "bg-primary text-secondary"
+          : "text-white border-primary"
+      }
+    >
+      {tab}
+    </FeatureButton>
+  ))}
+</div> */
+}
+{
+  /* <FeatureTab /> */
+}
+{
+  /* <div className="flex flex-col border-1 border-solid gap-6 rounded-2xl border-gray-400 mt-4 lg:flex-row lg:mx-auto lg:w-6xl lg:p-6 lg:rounded-2xl">
+  <div className="flex flex-col p-2 lg:flex-row">
+    <div className="lg:w-120 flex flex-col justify-center items-center gap-1.5">
+      <h3 className="text-primary text-2xl px-4 mb-2 lg:text-center lg:text-4xl">
+        {selectedTab} Features
+      </h3>
+      <div>{tabsContent[selectedTab as keyof typeof tabsContent]}</div>
+      <MainButton className="mt-4 lg:text-2xl">
+        Get Started with GhostVPN
+      </MainButton>
+    </div>
+  </div>
+  <div className="lg:w-full p-1">
+    <img
+      src="./MainFeatures/privacy.jpg"
+      alt="Main Features"
+      className="rounded-2xl"
+    />
+  </div>
+</div> */
+}
+{
+  /* <MainFeatureContent */
 }
