@@ -1,7 +1,7 @@
 import MainButton from "../MainComponents/MainButton";
 import IconsSlider from "../IconsSlider";
 import PricingPlan from "../PricingComp/PricingPlan";
-import MainContentFeatures from "../MainComponents/MainContentFeatures";
+import MainContentFeatures from "../Features/MainContentFeatures";
 import ExpertReviews from "../ExpertReviewsComp/ExpertReviews";
 import FaqContent from "../FAQComponents/FaqContent";
 

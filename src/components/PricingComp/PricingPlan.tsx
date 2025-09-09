@@ -17,8 +17,13 @@ export default function PricingPlan() {
   return (
     <div className="flex flex-col items-center justify-center py-3 bg-gray-900">
       <div className="flex flex-col items-center mb-5">
-        <h2 className="text-white text-3xl font-bold">Pricing Plans</h2>
-        <p className="text-gray-400">Choose a plan that suits your needs.</p>
+        <h2
+          id="pricing-card"
+          className="text-white text-3xl font-bold lg:text-5xl lg:my-1"
+        >
+          Pricing Plans
+        </h2>
+        <p className="text-gray-400 lg:text-2xl">Choose a plan that suits your needs.</p>
       </div>
       <div className="flex gap-2 border-solid border-2  border-primary rounded-2xl mb-2 lg:mb-6">
         {tabs.map((tab) => (

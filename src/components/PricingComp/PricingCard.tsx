@@ -1,7 +1,7 @@
 import MainButton from "../MainComponents/MainButton";
 import { FaRegCreditCard } from "react-icons/fa6";
 import { FaMoneyBillWave } from "react-icons/fa";
-import PlanFeatures from "../PlanFeautures";
+import PlanFeatures from "../Features/PlanFeautures";
 import type { PricingCardProps } from "../../data/PricingData";
 import { AnimatedPrice } from "./AnimationPrice";
 
@@ -14,10 +14,7 @@ export default function PricingCard({
   plan,
 }: PricingCardProps) {
   return (
-    <div
-      id="pricing-card"
-      className="flex flex-col py-5 px-10 bg-gray-700 rounded-2xl mb-5 lg:flex-row lg:items-center lg:justify-center lg:gap-10"
-    >
+    <div className="flex flex-col py-5 px-7 bg-gray-700 rounded-2xl mb-5 lg:flex-row lg:items-center lg:justify-center lg:gap-10">
       <div className="w-[15rem] h-[30rem] mx-2 lg:w-[23rem] lg:h-[28rem]">
         <h2 className="text-white text-3xl text-center font-bold">{title}</h2>
         <p className="text-primary text-2xl text-center py-1 font-bold">
