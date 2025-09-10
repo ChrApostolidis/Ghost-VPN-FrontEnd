@@ -4,6 +4,7 @@ import PricingPlan from "../PricingComp/PricingPlan";
 import MainContentFeatures from "../Features/MainContentFeatures";
 import ExpertReviews from "../ExpertReviewsComp/ExpertReviews";
 import FaqContent from "../FAQComponents/FaqContent";
+import MainCommunityReviews from "../CommunityReviews/MainCommunityReviews";
 
 export default function MainContent() {
   return (
@@ -39,6 +40,9 @@ export default function MainContent() {
       </div>
       <div>
         <IconsSlider />
+      </div>
+      <div>
+        <MainCommunityReviews />
       </div>
       <div>
         <PricingPlan />
