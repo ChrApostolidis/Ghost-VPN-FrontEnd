@@ -1,5 +1,5 @@
-import MainButton from "../MainComponents/MainButton";
-import IconsSlider from "../IconsSlider";
+import MainButton from "../Reusable/MainButton";
+import IconsSlider from "../CompIconSlider/IconsSlider";
 import PricingPlan from "../PricingComp/PricingPlan";
 import MainContentFeatures from "../Features/MainContentFeatures";
 import ExpertReviews from "../ExpertReviewsComp/ExpertReviews";

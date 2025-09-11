@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import MainButton from "./MainComponents/MainButton";
+import MainButton from "../Reusable/MainButton";
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);

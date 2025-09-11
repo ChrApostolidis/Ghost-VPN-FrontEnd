@@ -1,5 +1,5 @@
 import { useState } from "react";
-import FeatureButton from "../FeatureButton";
+import FeatureButton from "../Reusable/FeatureButton";
 import ContainerQA from "./ContainerQA";
 
 export default function FaqContent() {

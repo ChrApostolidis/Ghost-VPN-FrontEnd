@@ -2,7 +2,7 @@ import testimonials from "../../data/CommunityData";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaStar } from "react-icons/fa";
-import MainButton from "../MainComponents/MainButton";
+import MainButton from "../Reusable/MainButton";
 
 export default function MainCommunityReviews() {
   const [showAll, setShowAll] = useState(false);

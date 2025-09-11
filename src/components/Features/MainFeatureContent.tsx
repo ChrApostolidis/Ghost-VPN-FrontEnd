@@ -1,4 +1,4 @@
-import MainButton from "../MainComponents/MainButton";
+import MainButton from "../Reusable/MainButton";
 import { featuresData } from "../../data/FeatureData";
 import { motion } from "framer-motion";
 

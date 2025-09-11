@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import FeatureButton from "../FeatureButton";
+import FeatureButton from "../Reusable/FeatureButton";
 import type { featureTab } from "../../data/FeatureData";
 
 export default function FeatureTab({selectedTab, setSelectedTab}: {selectedTab: string, setSelectedTab: (tab: string) => void}) {
