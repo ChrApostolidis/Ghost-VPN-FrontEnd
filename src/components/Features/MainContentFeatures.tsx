@@ -7,10 +7,7 @@ export default function MainContentFeatures() {
 
   return (
     <div className="bg-secondary">
-      <h2
-        id="features"
-        className="text-white text-2xl font-bold text-center py-4 lg:text-4xl "
-      >
+      <h2 className="text-white text-2xl font-bold text-center py-4 lg:text-4xl ">
         Why people love to use Ghost VPN as their main VPN.
       </h2>
       <p className="text-gray-400 text-center lg:text-xl">

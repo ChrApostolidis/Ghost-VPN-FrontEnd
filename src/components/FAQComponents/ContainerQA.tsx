@@ -35,7 +35,12 @@ export default function ContainerQA({
 
   return (
     <div className="text-white mt-10 px-1">
-      <motion.ul variants={listVariants} initial="hidden" animate="visible">
+      <motion.ul
+        variants={listVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         {faqs[FaqSelection].map((item) => (
           <motion.li
             key={item.id}
@@ -47,7 +52,9 @@ export default function ContainerQA({
                 className="flex justify-between items-center w-full text-left"
                 onClick={() => toggleChange(item.id)}
               >
-                <h4 className="text-base font-semibold lg:text-2xl">{item.question}</h4>
+                <h4 className="text-base font-semibold lg:text-2xl">
+                  {item.question}
+                </h4>
 
                 <AnimatePresence mode="wait" initial={false}>
                   {openIds.includes(item.id) ? (

@@ -18,7 +18,6 @@ export default function PricingPlan() {
     <div className="flex flex-col items-center justify-center py-3 bg-gray-900">
       <div className="flex flex-col items-center mb-5">
         <h2
-          id="pricing-card"
           className="text-white text-3xl font-bold lg:text-5xl lg:my-1"
         >
           Pricing Plans

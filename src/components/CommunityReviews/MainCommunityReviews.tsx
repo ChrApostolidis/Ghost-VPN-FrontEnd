@@ -12,7 +12,7 @@ export default function MainCommunityReviews() {
     : testimonials.slice(0, initialCount);
   return (
     <div className="bg-secondary text-white text-center">
-      <h3 className="text-3xl mb-2 font-bold lg:text-4xl">
+      <h3 className="text-3xl mb-2 font-bold lg:text-5xl">
         Don&rsquo;t just take our word for it
       </h3>
       <p className="text-third text-xl mb-4">

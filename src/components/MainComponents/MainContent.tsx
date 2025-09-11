@@ -35,22 +35,22 @@ export default function MainContent() {
           </MainButton>
         </div>
       </div>
-      <div>
+      <div id="features">
         <MainContentFeatures />
       </div>
       <div>
         <IconsSlider />
       </div>
-      <div>
+      <div id="reviews">
         <MainCommunityReviews />
       </div>
-      <div>
+      <div id="pricing-card">
         <PricingPlan />
       </div>
       <div>
         <ExpertReviews />
       </div>
-      <div>
+      <div id="faq">
         <FaqContent />
       </div>
     </>
