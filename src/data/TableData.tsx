@@ -1,0 +1,121 @@
+import { FaCheckCircle , FaRegTimesCircle  } from "react-icons/fa";
+
+export const vpnFeatures = [
+  {
+    id: 1,
+    feature: "4K Streaming Support",
+    provider1: <FaCheckCircle className="text-primary" />,
+    provider2: <FaCheckCircle className="text-primary" />,
+    provider3: <FaCheckCircle className="text-primary" />,
+    provider4: <FaCheckCircle className="text-primary" />,
+  },
+  {
+    id: 2,
+    feature: "AES 256-bit Encryption",
+    provider1: <FaCheckCircle className="text-primary" />,
+    provider2: <FaCheckCircle className="text-primary" />,
+    provider3: <FaCheckCircle className="text-primary" />,
+    provider4: <FaCheckCircle className="text-primary" />,
+  },
+  {
+    id: 3,
+    feature: "Kill Switch",
+    provider1: <FaCheckCircle className="text-primary" />,
+    provider2: <FaCheckCircle className="text-primary" />,
+    provider3: <FaCheckCircle className="text-primary" />,
+    provider4: <FaCheckCircle className="text-primary" />,
+  },
+  {
+    id: 4,
+    feature: "DNS & IP Leak Protection",
+    provider1: <FaCheckCircle className="text-primary" />,
+    provider2: <FaCheckCircle className="text-primary" />,
+    provider3: <FaCheckCircle className="text-primary" />,
+    provider4: <FaCheckCircle className="text-primary" />,
+  },
+  {
+    id: 5,
+    feature: "Password Manager Included",
+    provider1: <FaCheckCircle className="text-primary" />,
+    provider2: <FaCheckCircle className="text-primary" />,
+    provider3: <FaRegTimesCircle className="text-[#da3940]" />,
+    provider4: <FaCheckCircle className="text-primary" />,
+  },
+  {
+    id: 6,
+    feature: "Ultra-Fast Full Rust Protocol",
+    provider1: <FaCheckCircle className="text-primary" />,
+    provider2: <FaRegTimesCircle className="text-[#da3940]" />,
+    provider3: <FaRegTimesCircle className="text-[#da3940]" />,
+    provider4: <FaRegTimesCircle className="text-[#da3940]" />,
+  },
+  {
+    id: 7,
+    feature: "Free Data Scanner Tool",
+    provider1: (
+      <span>
+        <FaCheckCircle className="text-primary" />
+        "US Only"
+      </span>
+    ),
+    provider2: <FaRegTimesCircle className="text-[#da3940]" />,
+    provider3: <FaRegTimesCircle className="text-[#da3940]" />,
+    provider4: <FaRegTimesCircle className="text-[#da3940]" />,
+  },
+  {
+    id: 8,
+    feature: "Free eSIM Data With All Plans",
+    provider1: <FaCheckCircle className="text-primary" />,
+    provider2: <FaRegTimesCircle className="text-[#da3940]" />,
+    provider3: <FaRegTimesCircle className="text-[#da3940]" />,
+    provider4: <FaRegTimesCircle className="text-[#da3940]" />,
+  },
+  {
+    id: 9,
+    feature: "TrustedServer Technology",
+    provider1: <FaCheckCircle className="text-primary" />,
+    provider2: <FaRegTimesCircle className="text-[#da3940]" />,
+    provider3: <FaRegTimesCircle className="text-[#da3940]" />,
+    provider4: <FaRegTimesCircle className="text-[#da3940]" />,
+  },
+  {
+    id: 10,
+    feature: "Parental Controls",
+    provider1: <FaCheckCircle className="text-primary" />,
+    provider2: <FaRegTimesCircle className="text-[#da3940]" />,
+    provider3: <FaRegTimesCircle className="text-[#da3940]" />,
+    provider4: <FaRegTimesCircle className="text-[#da3940]" />,
+  },
+  {
+    id: 11,
+    feature: "Aircove Built-In VPN Router",
+    provider1: <FaCheckCircle className="text-primary" />,
+    provider2: <FaRegTimesCircle className="text-[#da3940]" />,
+    provider3: <FaRegTimesCircle className="text-[#da3940]" />,
+    provider4: <FaRegTimesCircle className="text-[#da3940]" />,
+  },
+  {
+    id: 12,
+    feature: "Servers in All 50 U.S States",
+    provider1: <FaCheckCircle className="text-primary" />,
+    provider2: <FaRegTimesCircle className="text-[#da3940]" />,
+    provider3: <FaRegTimesCircle className="text-[#da3940]" />,
+    provider4: <FaRegTimesCircle className="text-[#da3940]" />,
+  },
+  {
+    id: 13,
+    feature: "In-App Server Speed Test",
+    provider1: <FaCheckCircle className="text-primary" />,
+    provider2: <FaRegTimesCircle className="text-[#da3940]" />,
+    provider3: <FaRegTimesCircle className="text-[#da3940]" />,
+    provider4: <FaRegTimesCircle className="text-[#da3940]" />,
+  },
+  {
+    id: 14,
+    feature: "WireGuard Post-Quantum Protection",
+    provider1: <FaCheckCircle className="text-primary" />,
+    provider2: <FaRegTimesCircle className="text-[#da3940]" />,
+    provider3: <FaRegTimesCircle className="text-[#da3940]" />,
+    provider4: <FaRegTimesCircle className="text-[#da3940]" />,
+  },
+] as const;
