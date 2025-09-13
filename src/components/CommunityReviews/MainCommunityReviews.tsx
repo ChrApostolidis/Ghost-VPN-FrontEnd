@@ -40,7 +40,7 @@ export default function MainCommunityReviews() {
         ))}
       </div>
       {!showAll && testimonials.length > initialCount && (
-        <MainButton className="mt-6" onClick={() => setShowAll(true)}>Show More</MainButton>
+        <MainButton className="mt-6 cursor-pointer" onClick={() => setShowAll(true)}>Show More</MainButton>
       )}
     </div>
   );

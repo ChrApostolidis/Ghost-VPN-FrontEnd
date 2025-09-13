@@ -5,6 +5,7 @@ import MainContentFeatures from "../Features/MainContentFeatures";
 import ExpertReviews from "../ExpertReviewsComp/ExpertReviews";
 import FaqContent from "../FAQComponents/FaqContent";
 import MainCommunityReviews from "../CommunityReviews/MainCommunityReviews";
+import TableComponent from "../VPNTableComp/TableComponent";
 
 export default function MainContent() {
   return (
@@ -40,6 +41,9 @@ export default function MainContent() {
       </div>
       <div>
         <IconsSlider />
+      </div>
+      <div>
+        <TableComponent />
       </div>
       <div id="reviews">
         <MainCommunityReviews />

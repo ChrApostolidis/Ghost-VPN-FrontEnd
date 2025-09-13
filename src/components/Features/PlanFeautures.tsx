@@ -1,4 +1,4 @@
-import { FaCheck } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
 
 function PlanFeatures({ features }: { features: string[] }) {
   return (
@@ -8,7 +8,7 @@ function PlanFeatures({ features }: { features: string[] }) {
           key={index} 
           className="flex gap-2 mt-3"
         >
-          <FaCheck className="text-primary" />
+          <FaCheckCircle className="text-primary" />
           <p className="text-white">{feature}</p>
         </div>
       ))}
