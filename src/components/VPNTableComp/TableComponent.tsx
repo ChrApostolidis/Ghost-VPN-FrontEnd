@@ -1,7 +1,9 @@
 import { vpnFeatures } from "../../data/TableData";
+import { useModal } from "../../ModalContext/UseModal";
 import MainButton from "../Reusable/MainButton";
 
 export default function GridComponent() {
+  const { openModal } = useModal();
   return (
     <div className="bg-secondary pb-8">
       <div className="overflow-x-auto bg-secondary">
@@ -73,7 +75,9 @@ export default function GridComponent() {
         </div>
       </div>
       <div className="bg-secondary flex justify-center items-center mt-2">
-        <MainButton className="lg:text-2xl">Get GhostVPN</MainButton>
+        <MainButton onClick={openModal} className="lg:text-2xl">
+          Get GhostVPN
+        </MainButton>
       </div>
     </div>
   );

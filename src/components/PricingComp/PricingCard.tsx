@@ -4,6 +4,7 @@ import { FaMoneyBillWave } from "react-icons/fa";
 import PlanFeatures from "../Features/PlanFeautures";
 import type { PricingCardProps } from "../../data/PricingData";
 import { AnimatedPrice } from "./AnimationPrice";
+import { useModal } from "../../ModalContext/UseModal";
 
 export default function PricingCard({
   title,
@@ -13,6 +14,7 @@ export default function PricingCard({
   featuresMessage,
   plan,
 }: PricingCardProps) {
+  const { openModal } = useModal();
   return (
     <div className="flex flex-col py-5 px-7 bg-gray-700 rounded-2xl mb-5 lg:flex-row lg:items-center lg:justify-center lg:gap-10">
       <div className="w-[15rem] h-[30rem] mx-2 lg:w-[23rem] lg:h-[28rem]">
@@ -21,7 +23,10 @@ export default function PricingCard({
           <AnimatedPrice value={price} />
           <span className="text-white text-base">/month</span>
         </p>
-        <MainButton className="mt-5 w-[15rem] h-10 lg:w-[23.5rem]">
+        <MainButton
+          onClick={openModal}
+          className="mt-5 w-[15rem] h-10 lg:w-[23.5rem]"
+        >
           {userMessage}
         </MainButton>
         <div className="flex items-center justify-center gap-2 my-3">

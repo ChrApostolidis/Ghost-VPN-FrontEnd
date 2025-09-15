@@ -1,12 +1,14 @@
 import MainButton from "../Reusable/MainButton";
 import { featuresData } from "../../data/FeatureData";
 import { motion } from "framer-motion";
+import { useModal } from "../../ModalContext/UseModal";
 
 export default function MainFeatureContent({
   selectedTab,
 }: {
   selectedTab: string;
 }) {
+  const {openModal} = useModal();
   return (
     <div className="flex flex-col border-1 border-solid gap-6 rounded-2xl border-gray-400 mt-4 lg:flex-row lg:mx-auto lg:w-6xl lg:p-6 lg:rounded-2xl">
       {featuresData.map(
@@ -39,7 +41,7 @@ export default function MainFeatureContent({
                   animate={{ opacity: 1 }}
                   transition={{ duration: 1.5, ease: "easeInOut" }}
                 >
-                  <MainButton className="mt-4 lg:text-2xl">
+                  <MainButton onClick={openModal} className="mt-4 lg:text-2xl">
                     Get Started with GhostVPN
                   </MainButton>
                 </motion.div>
