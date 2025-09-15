@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import MainButton from "../Reusable/MainButton";
+import Modal from "../Modal/Modal";
+import { useModal } from "../../ModalContext/UseModal";
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
+  const { isOpen, closeModal, openModal } = useModal();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,9 +21,7 @@ export default function Header() {
       <div className="h-20"></div>
       <header
         className={`h-20 fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-          isSticky
-            ? "bg-secondary shadow-lg"
-            : "bg-[#242323]"
+          isSticky ? "bg-secondary shadow-lg" : "bg-[#242323]"
         }`}
       >
         <div className="flex gap-10 mx-auto items-center justify-between w-full max-w-7xl h-20">
@@ -71,7 +72,10 @@ export default function Header() {
             </nav>
           </div>
           <div className="hidden lg:block">
-            <MainButton className="m-4">Get Protected</MainButton>
+            <MainButton onClick={openModal} className="m-4">
+              Get Protected
+            </MainButton>
+            <Modal isOpen={isOpen} onClose={closeModal} />
           </div>
           <div className="bg-[#33d36e] rounded-2xl hover:cursor-pointer flex items-center justify-center p-1 m-2 lg:hidden">
             <button className="w-10">

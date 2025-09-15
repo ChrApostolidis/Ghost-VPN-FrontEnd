@@ -6,8 +6,12 @@ import ExpertReviews from "../ExpertReviewsComp/ExpertReviews";
 import FaqContent from "../FAQComponents/FaqContent";
 import MainCommunityReviews from "../CommunityReviews/MainCommunityReviews";
 import TableComponent from "../VPNTableComp/TableComponent";
+import { useModal } from "../../ModalContext/UseModal";
+
 
 export default function MainContent() {
+  const {openModal } = useModal();
+
   return (
     <>
       <div className="relative bg-black w-full h-[600px] overflow-hidden lg:h-[450px]">
@@ -31,7 +35,10 @@ export default function MainContent() {
           anonymous browsing with GhostVPN.
         </h1>
         <div className="flex items-center justify-center">
-          <MainButton className="absolute bottom-2/10 w-[300px] bg-primary text-black font-bold py-2 px-4 rounded lg:bottom-1/10 lg:text-3xl">
+          <MainButton
+            onClick={openModal}
+            className="absolute bottom-2/10 w-[300px] bg-primary text-black font-bold py-2 px-4 rounded lg:bottom-1/10 lg:text-3xl"
+          >
             Get Started
           </MainButton>
         </div>
