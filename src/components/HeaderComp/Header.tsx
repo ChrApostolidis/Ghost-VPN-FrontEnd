@@ -7,6 +7,16 @@ export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
   const { isOpen, closeModal, openModal } = useModal();
 
+  const NavItems = [ {
+    name: "Features", link: "#features"
+  }, {
+    name: "Prices", link: "#pricing-card"
+  }, {
+    name: "Reviews", link: "#reviews"
+  }, {
+    name: "FAQs", link: "#faq"
+  }];
+
   useEffect(() => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > 50);
@@ -36,38 +46,13 @@ export default function Header() {
           <div className="hidden lg:flex gap-10 items-center">
             <nav className="">
               <ul className="flex space-x-8">
-                <li>
-                  <a
-                    href="#features"
-                    className="text-white text-xl hover:text-[#33d36e] lg:text-2xl"
-                  >
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#pricing-card"
-                    className="text-white text-xl hover:text-[#33d36e] lg:text-2xl"
-                  >
-                    Prices
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#reviews"
-                    className="text-white text-xl hover:text-[#33d36e] lg:text-2xl"
-                  >
-                    Reviews
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#faq"
-                    className="text-white text-xl hover:text-[#33d36e] lg:text-2xl"
-                  >
-                    FAQs
-                  </a>
-                </li>
+                {NavItems.map(({ name, link }) => (
+                  <li key={name}>
+                    <a href={link} className="text-white text-xl hover:text-[#33d36e] lg:text-2xl">
+                      {name}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </nav>
           </div>
