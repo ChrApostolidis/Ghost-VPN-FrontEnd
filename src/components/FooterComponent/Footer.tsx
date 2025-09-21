@@ -29,8 +29,9 @@ export default function Footer() {
       <div className="bg-secondary flex flex-col items-center gap-5 border-t-1 pt-8 border-third lg:justify-between lg:flex-row lg:px-20">
         <div>
           <ul className=" text-white text-lg flex flex-col gap-3 lg:flex-row lg:text-xl">
-            {termsArray.map((item) => (
+            {termsArray.map((item,index) => (
               <li
+                key={index}
                 onClick={openModal}
                 className="cursor-pointer hover:text-primary"
               >
@@ -41,8 +42,9 @@ export default function Footer() {
         </div>
         <div>
           <ul className=" text-white flex text-2xl gap-7 px-10 lg:text-2xl">
-            {socialMediaArray.map((item) => (
+            {socialMediaArray.map((item,index) => (
               <li
+                key={index}
                 onClick={openModal}
                 className="cursor-pointer hover:text-primary"
               >

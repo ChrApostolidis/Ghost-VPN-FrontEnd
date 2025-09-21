@@ -51,10 +51,10 @@ export default function MainFeatureContent({
                   src={`${feature.image}`}
                   alt={`${feature.title} image`}
                   className="rounded-2xl"
-                  initial={{ x: 80, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
+                  initial={{ y: -80, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
                   transition={{
-                    duration: 1.2,
+                    duration: 0.8,
                     ease: "easeOut",
                   }}
                 />

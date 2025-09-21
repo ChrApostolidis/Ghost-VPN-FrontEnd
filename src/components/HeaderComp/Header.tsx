@@ -1,21 +1,28 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type JSX } from "react";
 import MainButton from "../Reusable/MainButton";
 import Modal from "../Modal/Modal";
 import { useModal } from "../../ModalContext/UseModal";
+import { FaScrewdriverWrench } from "react-icons/fa6";
+import { FaQuora } from "react-icons/fa";
+import { IoPricetagsSharp } from "react-icons/io5";
+import { MdRateReview } from "react-icons/md";
+import NavMenu from "../NavMenu/NavMenu";
 
+export interface NavMenuItem {
+  name: string;
+  link: string;
+  icon: JSX.Element;
+}
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
   const { isOpen, closeModal, openModal } = useModal();
 
-  const NavItems = [ {
-    name: "Features", link: "#features"
-  }, {
-    name: "Prices", link: "#pricing-card"
-  }, {
-    name: "Reviews", link: "#reviews"
-  }, {
-    name: "FAQs", link: "#faq"
-  }];
+  const NavMenuItems: NavMenuItem[] = [
+    { name: "Features", link: "#features", icon: <FaScrewdriverWrench /> },
+    { name: "Prices", link: "#pricing-card", icon: <IoPricetagsSharp /> },
+    { name: "Reviews", link: "#reviews", icon: <MdRateReview /> },
+    { name: "FAQs", link: "#faq", icon: <FaQuora /> },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,9 +53,12 @@ export default function Header() {
           <div className="hidden lg:flex gap-10 items-center">
             <nav className="">
               <ul className="flex space-x-8">
-                {NavItems.map(({ name, link }) => (
+                {NavMenuItems.map(({ name, link }) => (
                   <li key={name}>
-                    <a href={link} className="text-white text-xl hover:text-[#33d36e] lg:text-2xl">
+                    <a
+                      href={link}
+                      className="text-white text-xl hover:text-[#33d36e] lg:text-2xl"
+                    >
                       {name}
                     </a>
                   </li>
@@ -62,11 +72,7 @@ export default function Header() {
             </MainButton>
             <Modal isOpen={isOpen} onClose={closeModal} />
           </div>
-          <div className="bg-[#33d36e] rounded-2xl hover:cursor-pointer flex items-center justify-center p-1 m-2 lg:hidden">
-            <button className="w-10">
-              <img src="burgerButton.png" alt="burgerButton" />
-            </button>
-          </div>
+          <NavMenu items={NavMenuItems} />
         </div>
       </header>
     </>
