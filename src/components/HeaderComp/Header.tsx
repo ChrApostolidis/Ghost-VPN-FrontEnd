@@ -19,8 +19,8 @@ export default function Header() {
 
   const NavMenuItems: NavMenuItem[] = [
     { name: "Features", link: "#features", icon: <FaScrewdriverWrench /> },
-    { name: "Prices", link: "#pricing-card", icon: <IoPricetagsSharp /> },
     { name: "Reviews", link: "#reviews", icon: <MdRateReview /> },
+    { name: "Prices", link: "#pricing-card", icon: <IoPricetagsSharp /> },
     { name: "FAQs", link: "#faq", icon: <FaQuora /> },
   ];
 

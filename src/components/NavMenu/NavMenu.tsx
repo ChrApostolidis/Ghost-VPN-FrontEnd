@@ -17,7 +17,7 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-export default function NavMenuButton({ items }: { items: NavMenuItem[] }) {
+export default function NavMenu({ items }: { items: NavMenuItem[] }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
