@@ -13,6 +13,7 @@ export interface NavMenuItem {
   link: string;
   icon: JSX.Element;
 }
+
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
   const { isOpen, closeModal, openModal } = useModal();

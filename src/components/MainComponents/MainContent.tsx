@@ -1,7 +1,7 @@
 import MainButton from "../Reusable/MainButton";
 import IconsSlider from "../CompIconSlider/IconsSlider";
 import PricingPlan from "../PricingComp/PricingPlan";
-import MainContentFeatures from "../Features/MainContentFeatures";
+import MainContentHeader from "../Features/MainFeaturesHeader";
 import ExpertReviews from "../ExpertReviewsComp/ExpertReviews";
 import FaqContent from "../FAQComponents/FaqContent";
 import MainCommunityReviews from "../CommunityReviews/MainCommunityReviews";
@@ -44,7 +44,7 @@ export default function MainContent() {
         </div>
       </div>
       <div id="features">
-        <MainContentFeatures />
+        <MainContentHeader />
       </div>
       <div>
         <IconsSlider />
