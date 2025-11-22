@@ -1,12 +1,13 @@
 import MainButton from "../Reusable/MainButton";
 import IconsSlider from "../CompIconSlider/IconsSlider";
 import PricingPlan from "../PricingComp/PricingPlan";
-import MainContentHeader from "../Features/MainFeaturesHeader";
+// import MainContentHeader from "../Features/MainFeaturesHeader";
 import ExpertReviews from "../ExpertReviewsComp/ExpertReviews";
 import FaqContent from "../FAQComponents/FaqContent";
 import MainCommunityReviews from "../CommunityReviews/MainCommunityReviews";
 import TableComponent from "../VPNTableComp/TableComponent";
 import { useModal } from "../../ModalContext/UseModal";
+import FeaturesContainer from "../Features/FeaturesContainer";
 
 
 export default function MainContent() {
@@ -44,7 +45,8 @@ export default function MainContent() {
         </div>
       </div>
       <div id="features">
-        <MainContentHeader />
+        {/* <MainContentHeader /> */}
+        <FeaturesContainer />
       </div>
       <div>
         <IconsSlider />

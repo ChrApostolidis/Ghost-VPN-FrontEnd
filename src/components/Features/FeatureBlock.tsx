@@ -1,3 +1,5 @@
+// Not used
+
 import { motion } from "framer-motion";
 import MainButton from "../Reusable/MainButton";
 import { useState } from "react";
@@ -42,10 +44,10 @@ export default function FeatureBlock({ feature, openModal }: { feature: Feature;
         </motion.div>
       </div>
 
-      <div className="lg:w-full p-1 mt-4 relative">
-        {/* Spinner shown while the image is loading */}
+      <div className="lg:w-full p-1 mt-4 relative overflow-hidden">
+        {/* Spinner shown while the image is loading - positioned absolutely to center over the image area */}
         {imgLoading && (
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center justify-center z-10">
             <span
               className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"
               aria-hidden="true"
@@ -57,7 +59,7 @@ export default function FeatureBlock({ feature, openModal }: { feature: Feature;
           src={`${feature.image}`}
           alt={`${feature.title} image`}
           loading="lazy"
-          className={`rounded-2xl transition-opacity duration-300 ${imgLoading ? "opacity-0" : "opacity-100"}`}
+          className={`rounded-2xl transition-opacity duration-300 w-full h-auto object-cover ${imgLoading ? "opacity-0" : "opacity-100"}`}
           initial={{ y: -80, opacity: 0 }}
           animate={{ y: 0, opacity: imgLoading ? 0 : 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
