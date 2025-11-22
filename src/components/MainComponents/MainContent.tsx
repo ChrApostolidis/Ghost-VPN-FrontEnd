@@ -1,7 +1,6 @@
 import MainButton from "../Reusable/MainButton";
 import IconsSlider from "../CompIconSlider/IconsSlider";
 import PricingPlan from "../PricingComp/PricingPlan";
-// import MainContentHeader from "../Features/MainFeaturesHeader";
 import ExpertReviews from "../ExpertReviewsComp/ExpertReviews";
 import FaqContent from "../FAQComponents/FaqContent";
 import MainCommunityReviews from "../CommunityReviews/MainCommunityReviews";
@@ -15,7 +14,7 @@ export default function MainContent() {
 
   return (
     <>
-      <div className="relative bg-black w-full h-[600px] overflow-hidden lg:h-[450px]">
+      <div className="relative bg-black w-full h-[600px] overflow-hidden lg:h-[550px]">
         <img
           src="World_map_green.png"
           alt="world map"
