@@ -1,4 +1,3 @@
-// Not used
 
 import { featuresData } from "../../data/FeatureData";
 import { useModal } from "../../ModalContext/UseModal";

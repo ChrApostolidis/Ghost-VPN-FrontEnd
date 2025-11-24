@@ -7,10 +7,10 @@ import MainCommunityReviews from "../CommunityReviews/MainCommunityReviews";
 import TableComponent from "../VPNTableComp/TableComponent";
 import { useModal } from "../../ModalContext/UseModal";
 import FeaturesContainer from "../Features/FeaturesContainer";
-
+import MainFeaturesContainer from "../Features/MainFeaturesContainer";
 
 export default function MainContent() {
-  const {openModal } = useModal();
+  const { openModal } = useModal();
 
   return (
     <>
@@ -44,8 +44,15 @@ export default function MainContent() {
         </div>
       </div>
       <div id="features">
-        {/* <MainContentHeader /> */}
-        <FeaturesContainer />
+        {/* shown on smaller screens */}
+        <div className="block lg:hidden">
+          <MainFeaturesContainer />
+        </div>
+
+        {/* shown on larger screens */}
+        <div className="hidden lg:block">
+          <FeaturesContainer />
+        </div>
       </div>
       <div>
         <IconsSlider />

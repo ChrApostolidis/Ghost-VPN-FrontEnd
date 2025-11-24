@@ -1,10 +1,9 @@
-// Not used
 
 import { useState } from "react";
 import FeatureTab from "./FeatureTab";
 import MainFeatureContent from "./MainFeatureContent";
 
-export default function MainFeaturesHeader() {
+export default function MainFeaturesContainer() {
   const [selectedTab, setSelectedTab] = useState("Privacy");
 
   return (
